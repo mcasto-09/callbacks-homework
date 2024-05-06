@@ -208,8 +208,9 @@ let startWithLetterA = (array) => array.filter((str) => str[0].toLowerCase() ===
 //
 // Make sure to use arrow functions combined with the map method.
 
-// REPLACE THIS WITH YOUR CODE
-
+let formalGreeting = (names) => {
+  return names.map((name) => `Hello, ${name}`);
+}
 /// /////// PROBLEM 10 //////////
 
 // Create a function called sortNumbers which takes in an array of numbers and returns
@@ -218,7 +219,7 @@ let startWithLetterA = (array) => array.filter((str) => str[0].toLowerCase() ===
 // Remember that by default, JavaScript sorts by converting all items to strings. So you
 // will need to provide a compare function.
 
-// REPLACE THIS WITH YOUR CODE
+let sortNumbers = (numbers) => numbers.sort((num1, num2) => num1 - num2);
 
 /// /////// PROBLEM 11 //////////
 
