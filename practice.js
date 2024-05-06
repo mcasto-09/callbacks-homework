@@ -109,11 +109,14 @@ contains(names, 'Colt', (result) => {
   Write a function called each that takes in an array of names and a callback function.
   For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
 */
-
-//Code Here
+function each (names, callback) {
+  for (let i = 0; i < names.length; i++) {
+    callback(names[i], i);
+  }
+}
 
 // Do not edit the code below.
-// Your function is called here
+
 each(names, (item, index) => {
   console.log('The item in the ' + index + ' position is ' + item);
 });
@@ -127,8 +130,14 @@ each(names, (item, index) => {
   When the correct user object is found, invoke the callback with the user object as an argument.
 */
 
-// Code here
-
+function getUserById (users, id, callback) {
+  for (const user of users) {
+    if (user.id === id){
+      callback (user);
+      break;
+    }
+  }
+}
 // Do not edit the code below.
 const users = [
   {
