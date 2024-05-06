@@ -28,12 +28,13 @@
   Return the result of invoking the callback.
 */
 
-// Code Here
+function first(array, callback) {
+  return callback(array[0])
+}
 
 // Do not edit the code below.
 const names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 
-// Your function is called here
 first(names, function (firstName) {
   console.log('The first name in names is ' + firstName);
   return firstName;
@@ -47,15 +48,15 @@ first(names, function (firstName) {
   Then invoke the callback, passing in the last element in the array as the argument.
   Return the result of invoking the callback.
 */
-
-//Code Here
-
+function last(array, callback) {
+  return callback(array[array.length - 1]);
+}
 // Do not edit the code below.
-// Your function is called here
 last(names, (lastName) => {
   console.log('The last name in names is ' + lastName);
   return lastName;
 });
+
 // Do not edit the code above.
 
 ////////// PROBLEM 3 //////////
