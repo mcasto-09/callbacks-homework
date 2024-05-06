@@ -66,10 +66,11 @@ last(names, (lastName) => {
   Invoke the callback, passing in the product of the two numbers multiplied as the argument.
 */
 
-//Code Here
+function multiply (x, y, callback) {
+  return callback(x * y);
+}
 
 // Do not edit the code below.
-// Your function is called here
 multiply(4, 3, function (answer) {
   console.log('The answer is ' + answer); //should console.log 12
 });
@@ -84,10 +85,15 @@ multiply(4, 3, function (answer) {
   If the name does not exist, invoke the callback with false as the argument.
 */
 
-//Code Here
+function contains(array, name, callback) {
+  if (array.includes(name)) {
+    return callback(true);
+  } else {
+    return callback(false)
+  }
+}
 
 // Do not edit the code below.
-// Your function is called here
 contains(names, 'Colt', (result) => {
   if (result === true) {
     console.log('Colt is in the array');
